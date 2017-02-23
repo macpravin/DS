@@ -32,6 +32,29 @@ public class OrderedArray {
 		mArraySize++;
 		
 	}
+	
+	public int find(long searchKey){
+		int lowerbound =0;
+		int upperBound = mArraySize-1;
+		int currentIndex=0;
+		while(true){
+			System.out.println("Current Index"+currentIndex +"Lower :"+lowerbound + "Upper Bound "+upperBound);
+			currentIndex = (lowerbound + upperBound)/2;
+		
+			if(arrayItems[currentIndex]==searchKey){
+				return currentIndex;
+			}
+			else if (lowerbound>upperBound){
+				return mArraySize;
+			} else{
+				if(arrayItems[currentIndex]<searchKey){
+					lowerbound =currentIndex+1;	
+				}else{
+					upperBound = currentIndex-1;
+				}
+			}
+		}
+	}
 
 	
 

@@ -11,8 +11,13 @@ public class OrderedArrayApp {
 		orderedArray.display();
 		orderedArray.insertWithValue(24);
 		orderedArray.display();
-		orderedArray.insertWithValue(4);
+		orderedArray.insertWithValue(35);
 		orderedArray.display();
+		
+		
+		System.out.println("Find :"+orderedArray.find(35));
+		System.out.println("Find :"+orderedArray.find(7));
+		System.out.println("Find :"+orderedArray.find(8));
 	
 	}
 }
